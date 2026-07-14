@@ -4,8 +4,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cmath>
 
 using namespace std;
+
 
 int main() {
     vector<string> todos;
@@ -24,6 +26,16 @@ int main() {
         switch (choice) {
         case 1:
             // View tasks
+            cout << "\nTasks:\n";
+
+            if (todos.empty()) {
+                cout << "No tasks.\n";
+            }
+            else {
+                for (int i = 0; i < todos.size(); i++) {
+                    cout << i + 1 << ". " << todos[i] << endl;
+                }
+            }
             break;
 
         case 2:
@@ -41,6 +53,9 @@ int main() {
             cout << "Invalid option.\n";
         }
     }
+
+   
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
