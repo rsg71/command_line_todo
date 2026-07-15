@@ -23,6 +23,9 @@ int main() {
 
         cin >> choice;
 
+        string task;
+
+
         switch (choice) {
         case 1:
             // View tasks
@@ -40,6 +43,12 @@ int main() {
 
         case 2:
             // Add task
+            cin.ignore();
+
+            cout << "Enter task: ";
+            getline(cin, task);
+
+            todos.push_back(task);
             break;
 
         case 3:
