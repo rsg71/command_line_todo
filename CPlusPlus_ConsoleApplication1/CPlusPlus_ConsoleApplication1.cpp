@@ -53,6 +53,17 @@ int main() {
 
         case 3:
             // Delete task
+            int index;
+
+            cout << "Task number: ";
+            cin >> index;
+
+            if (index >= 1 && index <= todos.size()) {
+                todos.erase(todos.begin() + index - 1);
+            }
+            else {
+                cout << "Invalid task.\n";
+            }
             break;
 
         case 4:
